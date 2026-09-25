@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وارسی سفارش و پرداخت کارت به کارت - بلک‌فروت</title>
+    <meta name="description" content="پرداخت مستقیم کارت به کارت به شماره کارت رسمی بلک‌فروت و ارسال فیش واریزی جهت تایید سریع سفارش" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Top Live Ticker -->
+    <div class="top-ticker">
+      <div class="container">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="ticker-content">
+            <span class="ticker-ping"><span class="ping-dot"></span><span>درگاه کارت به کارت شتابی امن بلک‌فروت</span></span>
+            <span>💳 انتقال سریع با ثبت آنی فیش واریزی</span>
+            <span>🛡️ پشتیبانی تایید حساب در کمتر از ۵ دقیقه</span>
+          </div>
+          <a href="tracking.html" style="color: var(--cyan); font-size: 0.75rem;">پیگیری وضعیت سفارشات</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header-nav">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo-brand">
+            <div class="logo-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <div class="logo-text-col">
+              <span class="logo-title">BLACKFRUIT</span>
+              <span class="logo-sub">SECURE PAYMENT GATEWAY</span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li class="nav-item"><a href="index.html">صفحه اصلی</a></li>
+            <li class="nav-item"><a href="products.html">فروشگاه میوه‌ها</a></li>
+            <li class="nav-item"><a href="tracking.html">پیگیری سفارش</a></li>
+            <li class="nav-item"><a href="contact.html">پشتیبانی و تیکت</a></li>
+            <li class="nav-item"><a href="admin.html" style="color: var(--gold-light);">پنل مدیریت</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <a href="products.html" class="btn-cyan-glow">
+              <span>← بازگشت به شاپ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 2.5rem 1.25rem 4rem 1.25rem;">
+      <!-- Title & Progress Step -->
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 2.5rem auto;">
+        <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.8rem; background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.35); border-radius: 9999px; color: #c084fc; font-size: 0.78rem; margin-bottom: 0.75rem;">
+          <span>مرحله پرداخت و تسویه حساب بانکی</span>
+        </div>
+        <h1 style="font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 0.6rem;">
+          انتقال کارت به کارت و پرداخت نهایی
+        </h1>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+          لطفاً مبلغ فاکتور سفارش خود را دقیقاً به شماره کارت اعلام شده زیر واریز کرده و سپس تصویر فیش یا اسکرین‌شات واریز را برای تایید ثبت کنید.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; max-width: 1050px; margin: 0 auto;">
+        <!-- Left Column: Bank Card & Transfer Instructions -->
+        <div>
+          <!-- Holographic Bank Card (Requirements 3 & 4) -->
+          <div class="bank-card-container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div class="bank-card-chip"></div>
+              <div style="font-family: var(--font-en); font-weight: 800; font-size: 1rem; color: #c084fc; letter-spacing: 0.1em;">
+                BLACKFRUIT TREASURY
+              </div>
+            </div>
+
+            <div class="bank-card-label" style="margin-top: 0.5rem;">شماره کارت بانکی رسمی شتاب:</div>
+            
+            <div class="bank-card-number-row">
+              <span class="bank-card-digits" id="displayCardDigits">6219 8619 5751 5835</span>
+            </div>
+
+            <div class="bank-card-holder-row">
+              <div>
+                <div class="bank-card-label">نام دارنده حساب / صاحب کارت:</div>
+                <div class="bank-card-holder-name" id="displayCardHolder">محمد تنگستانی</div>
+              </div>
+
+              <!-- Copy Card Button (Requirement 4) -->
+              <button type="button" class="btn-copy-card" id="btnCopyCard" onclick="copyBankCardNumber()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copyCardText">کپی شماره کارت</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Transfer Instructions (Requirement 5) -->
+          <div style="background: rgba(18, 22, 36, 0.7); border: 1px solid var(--border-neon); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--gold-light); font-weight: 800; font-size: 1rem;">
+              <span>⚠️</span>
+              <span>دستورالعمل مهم واریز وجه:</span>
+            </div>
+
+            <div class="payment-step-card">
+              <div class="payment-step-badge">۱</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                با استفاده از همراه بانک، آپ، ۷۲۴، بلو یا باجه خودپرداز، <strong style="color: #fff;">دقیقاً مبلغ فاکتور</strong> (<span id="instructPriceText" style="color: var(--gold-light); font-weight: 700;">-</span>) را به کارت آقای <strong style="color: #fff;">محمد تنگستانی</strong> کارت‌به‌کارت نمایید.
+              </div>
+            </div>
+
+            <div class="payment-step-card">
+              <div class="payment-step-badge">۲</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                پس از انتقال وجه، حتماً از رسید نهایی بانک (شامل شماره پیگیری / ارجاع و زمان) <strong style="color: #fff;">اسکرین‌شات یا عکس واضح</strong> بگیرید.
+              </div>
+            </div>
+
+            <div class="payment-step-card" style="margin-bottom: 0;">
+              <div class="payment-step-badge">۳</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                روی دکمه ارسال فیش در فرم روبرو یا دکمه باز کردن تیکت کلیک کرده و تصویر فیش را ضمیمه سفارش کنید تا بلافاصله بررسی و سفارش تایید شود.
+              </div>
+            </div>
+          </div>
+
+          <!-- Notice after payment (Requirement 6) -->
+          <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid var(--border-cyan); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+            <div>
+              <div style="font-weight: 800; font-size: 0.9rem; color: #fff; margin-bottom: 0.25rem;">
+                Payment completed? Please take a screenshot/photo of your payment receipt and send it through a support ticket.
+              </div>
+              <div style="font-size: 0.8rem; color: var(--cyan);">
+                واریز را انجام دادید؟ لطفاً اسکرین‌شات رسید پرداخت خود را از طریق تیکت پشتیبانی ارسال کنید.
+              </div>
+            </div>
+            <!-- Requirement 7 & 8: Open Support Ticket Button -->
+            <button type="button" class="btn-cyan-glow" onclick="openTicketForCurrentOrder()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>باز کردن تیکت پشتیبانی (Open Ticket)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Order Summary & Instant Receipt Submission (Requirements 2, 9, 10, 11) -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 1.75rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-dim);">ORDER SUMMARY</div>
+              <div id="paymentOrderCode" style="font-family: var(--font-en); font-size: 1.25rem; font-weight: 800; color: #c084fc;">
+                BF-XXXXXX
+              </div>
+            </div>
+            <span id="paymentStatusBadge" class="status-pill status-awaiting-payment">
+              Awaiting Payment (در انتظار پرداخت)
+            </span>
+          </div>
+
+          <!-- Product item & Total Price (Requirement 2) -->
+          <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span id="paymentFruitTitle" style="font-size: 1.05rem; font-weight: 800; color: #fff;">-</span>
+              <span id="paymentFruitBadge" class="rarity-badge rarity-mythical">Mythical</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+              <span>اکانت دریافت‌کننده در بازی:</span>
+              <span id="paymentRobloxUser" style="font-family: var(--font-en); color: var(--cyan); font-weight: 700;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+              <span>موقعیت ترید:</span>
+              <span id="paymentSeaLocation" style="color: #fff;">-</span>
+            </div>
+
+            <!-- Requirement 2: Display total price of selected fruit clearly -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem;">
+              <span style="font-weight: 800; color: #fff; font-size: 0.95rem;">مبلغ کل قابل پرداخت (Total Price):</span>
+              <div>
+                <span id="paymentTotalAmount" style="font-size: 1.45rem; font-weight: 900; color: var(--gold-light); font-family: var(--font-en);">
+                  ۰
+                </span>
+                <span style="font-size: 0.85rem; color: var(--text-dim); margin-right: 0.25rem;">تومان</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Receipt Upload Form (Requirements 9, 10, 21) -->
+          <form id="receiptUploadForm" onsubmit="handleReceiptSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" style="display: flex; justify-content: space-between;">
+                <span>تصویر فیش واریز بانکی (Screenshot / Receipt Image) <span style="color: #ef4444;">*</span></span>
+                <span style="font-size: 0.7rem; color: var(--text-dim);">JPG / PNG / WebP - حداکثر 5MB</span>
+              </label>
+
+              <!-- Drag and Drop Dropzone -->
+              <div class="receipt-upload-dropzone" id="receiptDropzone" onclick="document.getElementById('receiptFileInput').click()">
+                <input 
+                  type="file" 
+                  id="receiptFileInput" 
+                  accept="image/jpeg,image/png,image/webp,image/jpg" 
+                  style="display: none;" 
+                  onchange="handleReceiptFileSelected(this.files)"
+                />
+                
+                <div id="dropzoneContentPlaceholder">
+                  <div style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--cyan);">📷</div>
+                  <div style="font-weight: 700; color: #fff; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                    برای آپلود فیش کلیک کنید یا تصویر را به اینجا بکشید
+                  </div>
+                  <div style="font-size: 0.75rem; color: var(--text-dim);">
+                    آپلود فیش جهت احراز هویت واریزی الزامی می‌باشد (Mandatory)
+                  </div>
+                </div>
+
+                <div id="dropzonePreviewWrapper" style="display: none;">
+                  <img id="receiptPreviewImage" class="receipt-preview-img" alt="پیش‌نمایش فیش" />
+                  <div style="display: flex; justify-content: center; gap: 0.75rem; margin-top: 0.5rem;">
+                    <span id="receiptFileName" style="font-size: 0.75rem; color: var(--emerald); font-weight: 700;">-</span>
+                    <button type="button" style="background: none; border: none; color: #f87171; font-size: 0.75rem; cursor: pointer;" onclick="clearReceiptFile(event)">
+                      ✕ حذف و انتخاب مجدد
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Optional message with receipt -->
+            <div class="form-group">
+              <label class="form-label" for="receiptUserMessage">پیام یا توضیحات همراه فیش (اختیاری):</label>
+              <textarea 
+                id="receiptUserMessage" 
+                class="form-control" 
+                rows="2" 
+                placeholder="شماره پیگیری فیش، زمان واریز یا توضیحات اکانت روبلاکس..."
+              ></textarea>
+            </div>
+
+            <!-- Submit Button (Requirements 10 & 11) -->
+            <button 
+              type="submit" 
+              id="btnSubmitReceipt" 
+              class="btn-primary-glow" 
+              style="width: 100%; justify-content: center; padding: 0.9rem; font-size: 0.95rem; margin-top: 0.5rem;"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>ارسال نهایی فیش و ثبت درخواست تایید (Submit Receipt)</span>
+            </button>
+          </form>
+
+          <!-- Feedback notification on submit (Requirement 11) -->
+          <div id="receiptSubmittedSuccessBox" style="display: none; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: var(--radius-md); padding: 1.25rem; margin-top: 1rem; text-align: center;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--emerald);">✓</div>
+            <div style="font-weight: 800; color: #fff; font-size: 1rem; margin-bottom: 0.35rem;">
+              Your receipt has been submitted. Please wait while our support team verifies your payment.
+            </div>
+            <div style="font-size: 0.85rem; color: var(--emerald); line-height: 1.6; margin-bottom: 1rem;">
+              فیش واریزی شما با موفقیت ثبت شد. لطفاً تا زمان بررسی و تایید توسط تیم پشتیبانی منتظر بمانید.
+            </div>
+            <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="tracking.html" class="btn-cyan-glow" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">
+                پیگیری زنده وضعیت سفارش
+              </a>
+              <a href="contact.html" class="btn-primary-glow" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">
+                مشاهده تیکت ثبت شده
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom-bar">
+          <div>© ۲۰۲۵ تمامی حقوق برای فروشگاه بلک‌فروت محفوظ است.</div>
+          <div style="font-family: var(--font-en);">BLACKFRUIT VERIFIED CARD PAYMENT // 6219 8619 5751 5835</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/app.js"></script>
+    <script>
+      let currentOrderData = null;
+      let selectedReceiptBase64 = null;
+
+      document.addEventListener('DOMContentLoaded', () => {
+        loadPaymentOrderDetails();
+        setupDropzoneHandlers();
+      });
+
+      function loadPaymentOrderDetails() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let orderId = urlParams.get('orderId');
+
+        // Look in stored orders
+        const orders = getStoredOrders();
+        if (orderId) {
+          currentOrderData = orders.find(o => o.id === orderId);
+        }
+
+        // If not found or no param, take latest order or generate fallback demo
+        if (!currentOrderData && orders.length > 0) {
+          currentOrderData = orders[0];
+          orderId = currentOrderData.id;
+        } else if (!currentOrderData) {
+          // Fallback initial order
+          currentOrderData = {
+            id: 'BF-' + Math.floor(100000 + Math.random() * 900000),
+            fruitId: 'kitsune',
+            fruitName: 'کیتسونه (Kitsune Fruit)',
+            robloxUser: 'ShadowNinja_IR',
+            phone: '09120000000',
+            sea: 'Sea 3 (Mansion VIP)',
+            priceToman: 750000,
+            priceFormatted: '۷۵۰,۰۰۰',
+            date: new Date().toLocaleString('fa-IR'),
+            status: 'Awaiting Payment',
+            step: 1,
+            isPerm: false,
+            beliValue: '115,000,000'
+          };
+          saveNewOrder(currentOrderData);
+        }
+
+        // Render fields
+        document.getElementById('paymentOrderCode').textContent = currentOrderData.id;
+        document.getElementById('paymentFruitTitle').textContent = currentOrderData.fruitName;
+        document.getElementById('paymentRobloxUser').textContent = '@' + currentOrderData.robloxUser;
+        document.getElementById('paymentSeaLocation').textContent = currentOrderData.sea || 'Sea 3 (Mansion VIP)';
+        
+        const priceFmt = (currentOrderData.priceToman || 0).toLocaleString('fa-IR');
+        document.getElementById('paymentTotalAmount').textContent = priceFmt;
+        document.getElementById('instructPriceText').textContent = `${priceFmt} تومان`;
+
+        // Update status badge
+        updatePaymentStatusBadge(currentOrderData.status);
+
+        // If receipt was already submitted
+        if (currentOrderData.receiptImg) {
+          selectedReceiptBase64 = currentOrderData.receiptImg;
+          showReceiptPreview(currentOrderData.receiptImg, 'receipt_uploaded.png');
+          if (currentOrderData.status === 'Receipt Submitted' || currentOrderData.status === 'Under Verification') {
+            document.getElementById('receiptSubmittedSuccessBox').style.display = 'block';
+          }
+        }
+      }
+
+      function updatePaymentStatusBadge(status) {
+        const badge = document.getElementById('paymentStatusBadge');
+        if (!badge) return;
+
+        const statusMap = {
+          'Awaiting Payment': { text: 'Awaiting Payment (در انتظار پرداخت)', cls: 'status-awaiting-payment' },
+          'Receipt Submitted': { text: 'Receipt Submitted (فیش ارسال شده)', cls: 'status-receipt-submitted' },
+          'Under Verification': { text: 'Under Verification (در حال بررسی)', cls: 'status-under-verification' },
+          'Paid / Processing': { text: 'Paid / Processing (تایید شده / در حال ترید)', cls: 'status-paid-processing' },
+          'Payment Rejected': { text: 'Payment Rejected (رد پرداخت)', cls: 'status-payment-rejected' },
+          'Completed': { text: 'Completed (تحویل کامل)', cls: 'status-completed' }
+        };
+
+        const config = statusMap[status] || statusMap['Awaiting Payment'];
+        badge.className = `status-pill ${config.cls}`;
+        badge.textContent = config.text;
+      }
+
+      // Requirement 4: Copy Bank Card Number
+      function copyBankCardNumber() {
+        const rawCard = '6219861957515835';
+        navigator.clipboard?.writeText(rawCard).then(() => {
+          const btn = document.getElementById('btnCopyCard');
+          const txt = document.getElementById('copyCardText');
+          if (btn) btn.classList.add('copied');
+          if (txt) txt.textContent = 'کپی شد! ✓';
+          showToast('شماره کارت ۶۲۱۹-۸۶۱۹-۵۷۵۱-۵۸۳۵ (محمد تنگستانی) کپی شد.');
+          playUiBeep(880, 0.08);
+
+          setTimeout(() => {
+            if (btn) btn.classList.remove('copied');
+            if (txt) txt.textContent = 'کپی شماره کارت';
+          }, 3000);
+        }).catch(() => {
+          showToast('شماره کارت: 6219861957515835 بنام محمد تنگستانی');
+        });
+      }
+
+      // Setup drag and drop for receipt upload
+      function setupDropzoneHandlers() {
+        const zone = document.getElementById('receiptDropzone');
+        if (!zone) return;
+
+        ['dragenter', 'dragover'].forEach(name => {
+          zone.addEventListener(name, (e) => {
+            e.preventDefault();
+            zone.classList.add('dragover');
+          });
+        });
+
+        ['dragleave', 'drop'].forEach(name => {
+          zone.addEventListener(name, (e) => {
+            e.preventDefault();
+            zone.classList.remove('dragover');
+          });
+        });
+
+        zone.addEventListener('drop', (e) => {
+          const dt = e.dataTransfer;
+          if (dt && dt.files && dt.files.length > 0) {
+            handleReceiptFileSelected(dt.files);
+          }
+        });
+      }
+
+      // File validation: Type and Size (Requirement 21)
+      function handleReceiptFileSelected(files) {
+        if (!files || files.length === 0) return;
+        const file = files[0];
+
+        // Allowed image types
+        const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
+        if (!allowedTypes.includes(file.type.toLowerCase())) {
+          showToast('خطا: فرمت فایل مجاز نیست. لطفاً تصویر با فرمت JPG، PNG یا WebP بارگذاری کنید.');
+          playUiBeep(320, 0.15);
+          return;
+        }
+
+        // Max size: 5MB
+        const maxSize = 5 * 1024 * 1024;
+        if (file.size > maxSize) {
+          showToast('خطا: حجم تصویر فیش نمی‌تواند بیشتر از ۵ مگابایت باشد.');
+          playUiBeep(320, 0.15);
+          return;
+        }
+
+        // Read to Base64
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          selectedReceiptBase64 = e.target.result;
+          showReceiptPreview(selectedReceiptBase64, file.name);
+          showToast('تصویر فیش با موفقیت بارگذاری شد. اکنون دکمه ثبت نهایی را بزنید.');
+          playUiBeep(640, 0.08);
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function showReceiptPreview(src, filename) {
+        document.getElementById('dropzoneContentPlaceholder').style.display = 'none';
+        const wrap = document.getElementById('dropzonePreviewWrapper');
+        wrap.style.display = 'block';
+        document.getElementById('receiptPreviewImage').src = src;
+        document.getElementById('receiptFileName').textContent = filename || 'receipt.png';
+      }
+
+      function clearReceiptFile(e) {
+        if (e) e.stopPropagation();
+        selectedReceiptBase64 = null;
+        document.getElementById('receiptFileInput').value = '';
+        document.getElementById('dropzonePreviewWrapper').style.display = 'none';
+        document.getElementById('dropzoneContentPlaceholder').style.display = 'block';
+      }
+
+      // Requirement 9, 10, 11: Submit receipt & create linked support ticket
+      function handleReceiptSubmit(e) {
+        e.preventDefault();
+
+        // Receipt is mandatory (Requirement 10)
+        if (!selectedReceiptBase64) {
+          showToast('خطا: بارگذاری تصویر فیش واریز بانکی الزامی است!');
+          playUiBeep(300, 0.15);
+          document.getElementById('receiptDropzone').scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+
+        if (!currentOrderData) return;
+
+        const userMsg = document.getElementById('receiptUserMessage').value.trim();
+
+        // 1. Update order in localStorage
+        const orderId = currentOrderData.id;
+        const orders = getStoredOrders();
+        const targetOrder = orders.find(o => o.id === orderId);
+
+        if (targetOrder) {
+          targetOrder.status = 'Receipt Submitted';
+          targetOrder.receiptImg = selectedReceiptBase64;
+          targetOrder.receiptDate = new Date().toLocaleString('fa-IR');
+          targetOrder.receiptMessage = userMsg;
+          targetOrder.step = 2; // Under verification step
+          saveOrdersList(orders);
+          currentOrderData = targetOrder;
+        }
+
+        // 2. Create or update Support Ticket linked to this order (Requirements 9 & 10)
+        const tickets = getStoredTickets();
+        const existingTicket = tickets.find(t => t.orderId === orderId);
+
+        if (existingTicket) {
+          existingTicket.status = 'Receipt Submitted';
+          existingTicket.messages.push({
+            sender: 'customer',
+            author: currentOrderData.robloxUser || 'مشتری',
+            text: `تصویر فیش واریزی ارسال شد. مبلغ: ${currentOrderData.priceFormatted} تومان. توضیحات: ${userMsg || 'رسید انتقال کارت به کارت پیوست گردید.'}`,
+            receiptImg: selectedReceiptBase64,
+            date: new Date().toLocaleString('fa-IR')
+          });
+        } else {
+          tickets.unshift({
+            id: 'TK-' + Math.floor(10000 + Math.random() * 90000),
+            orderId: orderId,
+            customerName: currentOrderData.robloxUser || 'مشتری بلک‌فروت',
+            customerRoblox: currentOrderData.robloxUser,
+            customerPhone: currentOrderData.phone || '',
+            subject: `ارسال فیش واریز برای سفارش #${orderId}`,
+            status: 'Receipt Submitted',
+            date: new Date().toLocaleString('fa-IR'),
+            messages: [
+              {
+                sender: 'customer',
+                author: currentOrderData.robloxUser || 'مشتری',
+                text: `تصویر فیش واریزی برای سفارش میوه ${currentOrderData.fruitName} ارسال شد. مبلغ: ${currentOrderData.priceFormatted} تومان. ${userMsg}`,
+                receiptImg: selectedReceiptBase64,
+                date: new Date().toLocaleString('fa-IR')
+              }
+            ]
+          });
+        }
+        saveTicketsList(tickets);
+
+        // Update UI status badge & show message (Requirement 11)
+        updatePaymentStatusBadge('Receipt Submitted');
+        document.getElementById('receiptSubmittedSuccessBox').style.display = 'block';
+        document.getElementById('receiptSubmittedSuccessBox').scrollIntoView({ behavior: 'smooth' });
+
+        showToast('فیش واریزی ثبت شد! منتظر بررسی پشتیبان باشید.');
+        playUiBeep(780, 0.12);
+      }
+
+      // Requirement 8: Open Support Ticket directly with current order selected
+      function openTicketForCurrentOrder() {
+        const orderId = currentOrderData ? currentOrderData.id : '';
+        window.location.href = `contact.html?orderId=${encodeURIComponent(orderId)}`;
+      }
+    </script>
+  </body>
+</html>

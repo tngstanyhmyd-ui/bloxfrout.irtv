@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackFruit - فروشگاه تخصصی میوه‌های Blox Fruits</title>
+    <meta name="description" content="فروشگاه تخصصی خرید و فروش میوه‌های Blox Fruits، تحویل آنی زیر ۱۰ دقیقه در سرور VIP، رهگیری سفارش و تسویه شتابی و تلگرام" />
+    <meta property="og:title" content="BlackFruit - فروشگاه تخصصی میوه‌های Blox Fruits" />
+    <meta property="og:description" content="فروشگاه تخصصی خرید و فروش میوه‌های Blox Fruits، تحویل آنی زیر ۱۰ دقیقه در سرور VIP، رهگیری سفارش و تسویه شتابی و تلگرام" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Top Live Status Ticker -->
+    <div class="top-ticker">
+      <div class="container">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="ticker-content">
+            <span class="ticker-ping">
+              <span class="ping-dot"></span>
+              <span>پینگ سرور: 14ms</span>
+            </span>
+            <span>⚡ تحویل فوری Kitsune Fruit (۲ دقیقه پیش)</span>
+            <span>🔒 سفارش #BF-89342 با موفقیت تحویل شد</span>
+            <span>🔥 موجودی میوه Dragon Fruit (Rework) شارژ شد</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.75rem;">
+            <a href="tracking.html" style="color: var(--cyan);">رهگیری سفارشات فعال</a>
+            <span style="color: var(--text-dim);">|</span>
+            <a href="https://t.me/blackfruit_support" target="_blank" style="color: var(--primary-light);">پشتیبانی تلگرام ۲۴/۷</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="header-nav">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Logo Brand -->
+          <a href="index.html" class="logo-brand">
+            <div class="logo-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              </svg>
+            </div>
+            <div class="logo-text-col">
+              <span class="logo-title">BLACKFRUIT</span>
+              <span class="logo-sub">BLOX FRUITS MARKETPLACE</span>
+            </div>
+          </a>
+
+          <!-- Nav Links -->
+          <ul class="nav-links">
+            <li class="nav-item active"><a href="index.html">صفحه اصلی</a></li>
+            <li class="nav-item"><a href="products.html">فروشگاه میوه‌ها</a></li>
+            <li class="nav-item"><a href="tracking.html">پیگیری سفارش</a></li>
+            <li class="nav-item"><a href="about.html">درباره ما و قوانین</a></li>
+            <li class="nav-item"><a href="contact.html">پشتیبانی و تیکت</a></li>
+            <li class="nav-item"><a href="admin.html" style="color: var(--gold-light);">پنل مدیریت</a></li>
+          </ul>
+
+          <!-- Nav Search with Ctrl+K shortcut -->
+          <div class="nav-search-bar">
+            <input type="text" id="navSearchInput" class="nav-search-input" placeholder="جستجوی میوه، گیم‌پاس، باندل..." oninput="handleNavSearch(this.value)" />
+            <span class="search-icon-pos">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <span class="search-shortcut-badge">Ctrl+K</span>
+          </div>
+
+          <!-- Nav Actions (Cart & Login) -->
+          <div class="nav-actions">
+            <button class="btn-icon-round" onclick="toggleCartDrawer(true)" title="سبد خرید">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              <span class="cart-counter">0</span>
+            </button>
+            <a href="admin.html" class="btn-primary-glow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <span>ورود / پنل</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Cyber Holographic Display -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text and CTA Col -->
+          <div class="hero-text-col">
+            <div class="hero-tag">
+              <span style="color: var(--gold);">🔥</span>
+              <span>معتبرترین و سریع‌ترین بازار میوه‌های Blox Fruits در ایران</span>
+            </div>
+            <h1 class="hero-title">
+              <span class="brand-accent">BLACKFRUIT</span> نسخه ۲.۴<br />
+              فروشگاه تخصصی میوه‌های Blox Fruits
+            </h1>
+            <p class="hero-desc">
+              میوه‌های محبوب و کمیاب Blox Fruits را با ارزان‌ترین قیمت تومانی و تسویه آنی پیدا کن و سفارش خود را در کمتر از ۱۰ دقیقه از طریق سرور خصوصی VIP و ترید ایمن تحویل بگیر.
+            </p>
+            <div class="hero-btn-row">
+              <a href="products.html" class="btn-primary-glow" style="padding: 0.75rem 1.6rem; font-size: 0.95rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span>مشاهده و خرید میوه‌ها</span>
+              </a>
+              <a href="tracking.html" class="btn-cyan-glow" style="padding: 0.75rem 1.4rem; font-size: 0.95rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>پیگیری وضعیت سفارش</span>
+              </a>
+              <a href="https://t.me/blackfruit_support" target="_blank" class="btn-gold-glow" style="padding: 0.75rem 1.4rem; font-size: 0.95rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-16.5 7.5a2.25 2.25 0 0 0 .126 4.137l4.35 1.45 1.5 4.5a2.25 2.25 0 0 0 3.738.742l2.67-2.67 4.14 3.03a2.25 2.25 0 0 0 3.528-1.428l3-15a2.25 2.25 0 0 0-2.53-2.476z"/></svg>
+                <span>سفارش در تلگرام</span>
+              </a>
+            </div>
+
+            <!-- Trust Metrics -->
+            <div class="hero-stats-row">
+              <div class="hero-stat-card">
+                <div class="stat-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div class="stat-info">
+                  <div class="stat-num">زیر ۱۰ دقیقه</div>
+                  <div class="stat-lbl">میانگین زمان تحویل</div>
+                </div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="stat-icon" style="color: var(--primary-light);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="stat-info">
+                  <div class="stat-num">+۱۰,۰۰۰</div>
+                  <div class="stat-lbl">تراکنش موفق بازی</div>
+                </div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="stat-icon" style="color: var(--emerald);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="stat-info">
+                  <div class="stat-num">۱۰۰٪ امن</div>
+                  <div class="stat-lbl">تضمین عدم مسدودی</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Hologram Fruit Pedestal Showcase (Matching Image 1) -->
+          <div class="pedestal-display-box">
+            <div class="pedestal-header-bar">
+              <span class="pedestal-badge">MYTHICAL & LEGENDARY TIER</span>
+              <span style="font-size: 0.75rem; color: var(--cyan); font-family: var(--font-en);">VIP TRADE BOT READY</span>
+            </div>
+
+            <div class="fruits-row-hologram">
+              <!-- Dragon -->
+              <div class="holo-fruit-item" onclick="openOrderModal('dragon-west')">
+                <div class="holo-glow-halo" style="background: #f59e0b;"></div>
+                <div class="holo-img">
+                  <svg viewBox="0 0 100 100" style="width: 72px; height: 72px;">
+                    <circle cx="50" cy="50" r="38" fill="#451a03" stroke="#f59e0b" stroke-width="3"/>
+                    <path d="M30 30 L16 16 L34 26" fill="#b45309" stroke="#fbbf24" stroke-width="1.5" />
+                    <path d="M70 30 L84 16 L66 26" fill="#b45309" stroke="#fbbf24" stroke-width="1.5" />
+                    <circle cx="40" cy="50" r="4" fill="#fef08a"/>
+                    <circle cx="60" cy="50" r="4" fill="#fef08a"/>
+                  </svg>
+                </div>
+                <div class="holo-pedestal-platform" style="background: #f59e0b; box-shadow: 0 0 16px #f59e0b;"></div>
+                <div style="font-size: 0.72rem; font-weight: 700; color: #fbbf24; margin-top: 0.4rem;">Dragon West</div>
+              </div>
+
+              <!-- Leopard -->
+              <div class="holo-fruit-item" onclick="openOrderModal('leopard')">
+                <div class="holo-glow-halo" style="background: #06b6d4;"></div>
+                <div class="holo-img">
+                  <svg viewBox="0 0 100 100" style="width: 72px; height: 72px;">
+                    <rect x="24" y="24" width="52" height="52" rx="12" fill="#854d0e" stroke="#06b6d4" stroke-width="3"/>
+                    <circle cx="36" cy="40" r="3" fill="#422006" />
+                    <circle cx="64" cy="40" r="3" fill="#422006" />
+                    <circle cx="50" cy="62" r="3.5" fill="#422006" />
+                  </svg>
+                </div>
+                <div class="holo-pedestal-platform" style="background: #06b6d4; box-shadow: 0 0 16px #06b6d4;"></div>
+                <div style="font-size: 0.72rem; font-weight: 700; color: #38bdf8; margin-top: 0.4rem;">Leopard</div>
+              </div>
+
+              <!-- Dough -->
+              <div class="holo-fruit-item" onclick="openOrderModal('dough')">
+                <div class="holo-glow-halo" style="background: #ec4899;"></div>
+                <div class="holo-img">
+                  <svg viewBox="0 0 100 100" style="width: 72px; height: 72px;">
+                    <ellipse cx="50" cy="62" rx="34" ry="24" fill="#831843" stroke="#f472b6" stroke-width="2.5"/>
+                    <path d="M20 54 Q30 72 40 56 Q50 74 60 55 Q70 70 80 54 C80 40 70 30 50 30 C30 30 20 40 20 54 Z" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+                    <circle cx="42" cy="46" r="3" fill="#831843" />
+                    <circle cx="58" cy="46" r="3" fill="#831843" />
+                  </svg>
+                </div>
+                <div class="holo-pedestal-platform" style="background: #ec4899; box-shadow: 0 0 16px #ec4899;"></div>
+                <div style="font-size: 0.72rem; font-weight: 700; color: #f472b6; margin-top: 0.4rem;">Dough</div>
+              </div>
+
+              <!-- Kitsune -->
+              <div class="holo-fruit-item" onclick="openOrderModal('kitsune')">
+                <div class="holo-glow-halo" style="background: #a855f7;"></div>
+                <div class="holo-img">
+                  <svg viewBox="0 0 100 100" style="width: 72px; height: 72px;">
+                    <circle cx="50" cy="50" r="38" fill="#1e1b4b" stroke="#38bdf8" stroke-width="2.5"/>
+                    <polygon points="32,28 22,12 40,24" fill="#6366f1" stroke="#38bdf8" stroke-width="1.5" />
+                    <polygon points="68,28 78,12 60,24" fill="#6366f1" stroke="#38bdf8" stroke-width="1.5" />
+                    <ellipse cx="40" cy="48" rx="3" ry="1.5" fill="#38bdf8" />
+                    <ellipse cx="60" cy="48" rx="3" ry="1.5" fill="#38bdf8" />
+                  </svg>
+                </div>
+                <div class="holo-pedestal-platform" style="background: #a855f7; box-shadow: 0 0 16px #a855f7;"></div>
+                <div style="font-size: 0.72rem; font-weight: 700; color: #c084fc; margin-top: 0.4rem;">Kitsune</div>
+              </div>
+            </div>
+
+            <!-- Pedestal Footer -->
+            <div class="pedestal-base-stand">
+              <div>
+                <div class="stand-info-title">اتاق امن ترید سرور خصوصی (VIP)</div>
+                <div class="stand-info-sub">تحویل‌دهندگان مستقر در دریای دوم و سوم (Sea 2 & 3 Cafe)</div>
+              </div>
+              <button class="btn-cyan-glow" onclick="openOrderModal('kitsune')">
+                انتخاب میوه
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blox Values Live Calculator Section -->
+    <div class="container">
+      <div class="calculator-banner">
+        <div class="calc-left-col">
+          <div class="calc-icon-badge">📊</div>
+          <div>
+            <div class="calc-title">محاسبه‌گر ارزش لحظه‌ای میوه‌ها (Blox Values Calculator)</div>
+            <div class="calc-desc">تمام نرخ‌های Beli و دیمند بر اساس آخرین آپدیت ۲۰۲۵ دیسکورد رسمی تریدرها تنظیم شده است.</div>
+          </div>
+        </div>
+        <button class="btn-gold-glow" onclick="openCalculatorModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+          <span>باز کردن ماشین‌حساب ترید</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Featured Showcase Catalog -->
+    <section class="container" style="padding-top: 1rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            کانکشن میوه‌های اسطوره‌ای و پرتقاضا
+          </span>
+          <h2 style="font-size: 1.85rem; font-weight: 800; color: #fff;">ویترین اختصاصی میوه‌های Blox Fruits</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.2rem;">انتخاب میوه فیزیکی (Physical) یا دائمی (Permanent) با گارانتی تحویل رسمی در کمتر از ۱۰ دقیقه</p>
+        </div>
+        <a href="products.html" class="btn-cyan-glow">
+          <span>مشاهده همه میوه‌ها (+۲۴ میوه)</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-row">
+        <div class="tab-pills-list">
+          <button class="filter-pill active" data-cat="all">همه میوه‌ها</button>
+          <button class="filter-pill" data-cat="mythical">اسطوره‌ای (Mythical)</button>
+          <button class="filter-pill" data-cat="legendary">افسانه‌ای (Legendary)</button>
+          <button class="filter-pill" data-cat="perm">گیم‌پاس و پرم</button>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <input type="text" id="catalogSearchInput" class="form-control" style="max-width: 240px; padding: 0.4rem 0.8rem; font-size: 0.8rem;" placeholder="فیلتر نام میوه..." />
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="productsGrid" class="products-grid">
+        <!-- Rendered dynamically by assets/app.js -->
+      </div>
+    </section>
+
+    <!-- Why BlackFruit Section (Matching Stitch Image 2) -->
+    <section class="features-section" style="background: rgba(18, 22, 36, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            استاندارد نوین مارکت‌پلیس گیمینگ
+          </div>
+          <h2 class="section-title">چرا خرید از بلک‌فروت امن‌ترین گزینه است؟</h2>
+          <p class="section-subtitle">تجربه یک ترید بدون استرس با پلتفرمی که مخصوص پلیرهای ایرانی Blox Fruits شخصی‌سازی شده است.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="pillar-title">تحویل زیر ۱۰ دقیقه در VIP Server</div>
+            <div class="pillar-desc">بلافاصله پس از پرداخت، لینک سرور خصوصی به همراه مشخصات اکانت اختصاصی تحویل‌دهنده ارسال شده و میوه فیزیکی به اکانت شما اضافه می‌شود.</div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="color: var(--emerald); background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.35);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <div class="pillar-title">۱۰۰٪ آنتی‌بن و کاملاً قانونی</div>
+            <div class="pillar-desc">تمامی میوه‌ها و روباکس‌ها از طریق تریدهای قانونی بازی و گیفت‌های معتبر تامین می‌شوند. بدون استفاده از هیچ‌گونه اکسپلویت یا اسکریپت تقلبی.</div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="color: var(--gold-light); background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.35);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <div class="pillar-title">پشتیبانی ۲۴ ساعته تیکت و چت</div>
+            <div class="pillar-desc">تیم پشتیبانی ما حتی در ساعات نیمه‌شب در کمتر از ۵ دقیقه پاسخگوی سوالات، هماهنگی‌های ترید و پیگیری مشکلات شما در بازی است.</div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="color: var(--primary-light); background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.35);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+            <div class="pillar-title">نرخ تومان منصفانه و درگاه شتاب</div>
+            <div class="pillar-desc">پرداخت با کلیه کارت‌های عضو شتاب، بدون نیاز به گیفت‌کارت دلاری گران‌قیمت یا تبدیل روباکس با کارمزدهای نجومی.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof and Gamer Reviews -->
+    <section class="reviews-section container">
+      <div class="reviews-grid">
+        <div class="reviews-stat-panel">
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">رضایت ثبت شده در ۲۴ ماه گذشته</div>
+          <div class="score-big">۴.۹</div>
+          <div class="stars-row">★★★★★</div>
+          <div style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">مورد اعتماد بیش از ۱,۴۲۰ پلیر روبلاکس در ایران</div>
+          <div class="rating-stat-desc">گیمرهای سرورهای ایران بلکس فروت در دیسکورد و تلگرام تجربیات ترید آسان و سریع خود با BLACKFRUIT را به اشتراک گذاشته‌اند.</div>
+        </div>
+
+        <div class="reviews-cards-list">
+          <div class="review-card">
+            <div class="review-header">
+              <span class="review-author">امیرحسین [Amir_Blox] <span style="font-size: 0.72rem; color: var(--text-dim);">(دریای سوم Sea 3 - لول ۲۵۵۰)</span></span>
+              <span style="color: var(--gold); font-size: 0.85rem;">★★★★★</span>
+            </div>
+            <div class="review-quote">«واقعاً دمشون گرم! من ساعت ۳ صبح میوه Kitsune خریدم، فکر نمی‌کردم کسی بیدار باشه ولی زیر ۵ دقیقه ادمین جوین سرور داد و ترید زدیم. دمتون گرم!»</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <span class="review-author">سینا نظری [Sina_Sniper] <span style="font-size: 0.72rem; color: var(--text-dim);">(پلیر مسابقات PvP)</span></span>
+              <span style="color: var(--gold); font-size: 0.85rem;">★★★★★</span>
+            </div>
+            <div class="review-quote">«پرم کیتسونه قیمت روباکسش خیلی گرون درمی‌اومد تو گیفت کارت، اما بلک‌فروت با قیمت عالی به تومان داد و گیفت مستقیم به اکانتم فرستاده شد.»</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <span class="review-author">عرفان کاظمی [ErfanPro] <span style="font-size: 0.72rem; color: var(--text-dim);">(عضو کلن Top 10 IR)</span></span>
+              <span style="color: var(--gold); font-size: 0.85rem;">★★★★★</span>
+            </div>
+            <div class="review-quote">«اولش شک داشتم چون سایت‌های دیگه خیلی طول میدن، ولی پشتیبانی تیکت فوری راهنمایی کرد چطور تو کافه (Cafe Sea 2) ترید بزنیم و میوه لئوپارد رو گرفتم. بهترین سایت بلکس فروت در ایران بدون شک.»</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion (Matching Stitch Image 2) -->
+    <section class="faq-section container">
+      <div class="section-header-center">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          راهنمای خرید و سوالات متداول
+        </div>
+        <h2 class="section-title">پاسخ به سوالات پرتکرار گیمرها</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span>میوه خریداری شده چگونه در بازی به من تحویل داده می‌شود؟</span>
+            <span class="faq-toggle-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            پس از تکمیل سفارش، به صورت خودکار لینک ورود به سرور خصوصی (VIP Server) بلک‌فروت برای شما باز می‌شود. شما وارد بازی می‌شوید و در دریای دوم (Cafe Sea 2) یا دریای سوم (Mansion Sea 3) روبروی ربات یا ادمین تحویل‌دهنده قرار می‌گیرید و میوه را از طریق میز ترید رسمی دریافت می‌نمایید.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>آیا برای دریافت میوه فیزیکی باید میوه بی‌ارزش در ترید بگذارم؟ (قانون تفاوت ۴۰٪ ارزش)</span>
+            <span class="faq-toggle-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            بله! طبق قوانین بازی Blox Fruits برای جلوگیری از تقلب، اختلاف ارزش Beli دو طرف ترید نباید بیشتر از ۴۰٪ باشد. شما می‌توانید از میوه‌های کم‌ارزش موجود در کوله‌پشتی خود (مثل Love, Spider, Quake یا هر میوه معمولی) استفاده کنید تا بالانس تکمیل شود. در صورت نداشتن میوه، ادمین پشتیبان به شما راهکار جایگزین خواهد داد.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>آیا خطری مثل مسدودی یا بن شدن برای اکانت روبلاکس من وجود دارد؟</span>
+            <span class="faq-toggle-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            خیر، به هیچ وجه! تمامی میوه‌ها کاملاً فیزیکی و قانونی داخل بازی ذخیره شده‌اند و ترید از طریق مکانیزم رسمی خود گیم Blox Fruits انجام می‌پذیرد. ما هیچ‌گاه یوزرنیم و پسوورد اکانت شما را نمی‌خواهیم و تنها نام کاربری برای ارسال اینوایت سرور کافی است.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>اگر سفارش دیر تحویل داده شد چطور پیگیری کنم؟</span>
+            <span class="faq-toggle-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            شما با داشتن کد سفارش (مثلاً #BF-829431) می‌توانید به بخش «پیگیری سفارش» مراجعه کنید و وضعیت لحظه‌ای ترید و نام ادمین را ببینید یا مستقیماً به پشتیبانی تلگرام پیام دهید تا در اولویت فوری بررسی شود.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Urgent CTA Banner -->
+    <div class="container">
+      <div class="cta-banner-box">
+        <div style="font-size: 0.85rem; color: var(--cyan); margin-bottom: 0.6rem; font-weight: 700;">آماده قوی‌تر شدن در سرورها هستی؟</div>
+        <h2 class="cta-banner-title">همین الان میوه مورد علاقت رو سفارش بده و رکورد PvP رو بشکن!</h2>
+        <p class="cta-banner-desc">تحویل فوق‌العاده سریع با بهترین قیمت ریالی در ایران، پشتیبانی فعال و همراه شما تا اتمام ترید.</p>
+        <div class="cta-btn-group">
+          <a href="products.html" class="btn-primary-glow" style="padding: 0.85rem 2rem; font-size: 1rem;">
+            ورود به لیست خرید میوه‌ها
+          </a>
+          <a href="https://t.me/blackfruit_support" target="_blank" class="btn-cyan-glow" style="padding: 0.85rem 1.8rem; font-size: 1rem;">
+            ارتباط فوری با پشتیبان ترید تلگرام
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="logo-brand" style="margin-bottom: 1rem;">
+              <div class="logo-icon-box" style="width: 36px; height: 36px;">
+                <svg viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              </div>
+              <div class="logo-text-col">
+                <span class="logo-title" style="font-size: 1.1rem;">BLACKFRUIT</span>
+                <span class="logo-sub">BLOX FRUITS MARKETPLACE</span>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1rem;">
+              تخصصی‌ترین و ایمن‌ترین بازار خرید و فروش میوه‌های بازی بلکس فروت، پرمنت‌ها و گیم‌پاس با تحویل آنی درون بازی و گارانتی اصالت معاملات.
+            </p>
+            <div class="ticker-ping">
+              <span class="ping-dot"></span>
+              <span>سرورهای تحویل آنلاین: آماده تبادل فوری</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-col-title">دسترسی سریع</div>
+            <ul class="footer-links-list">
+              <li><a href="products.html">لیست قیمت و ارزش میوه‌ها (Values)</a></li>
+              <li><a href="products.html?cat=mythical">میوه‌های اسطوره‌ای (Mythical)</a></li>
+              <li><a href="products.html?cat=perm">گیم‌پاس و آیتم‌های ویژه</a></li>
+              <li><a href="tracking.html">استعلام و پیگیری وضعیت سفارش</a></li>
+              <li><a href="admin.html">پنل مدیریت پیشرفته</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">پشتیبانی و امنیت</div>
+            <ul class="footer-links-list">
+              <li><a href="contact.html">ارسال تیکت فوری ۲۴/۷</a></li>
+              <li><a href="about.html">قوانین و راهنمای انتقال امن درون بازی</a></li>
+              <li><a href="about.html#trade-rule">قانون ۴۰٪ تفاوت ترید چیست؟</a></li>
+              <li><a href="about.html#faq">پرسش‌های متداول مشتریان (FAQ)</a></li>
+              <li><a href="https://t.me/blackfruit_support">پشتیبانی مستقیم تلگرام</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">تایید و اعتبار</div>
+            <div class="security-badge-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--cyan);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <div>
+                <div style="font-size: 0.82rem; font-weight: 700; color: #fff;">تراکنش تضمین‌شده</div>
+                <div style="font-size: 0.7rem; color: var(--text-dim);">ضمانت بازگشت وجه ۱۰۰٪</div>
+              </div>
+            </div>
+            <div class="security-badge-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold);"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <div>
+                <div style="font-size: 0.82rem; font-weight: 700; color: #fff;">تحویل خودکار کمتر از ۵ دقیقه</div>
+                <div style="font-size: 0.7rem; color: var(--text-dim);">ربات‌های ترید VIP فعال</div>
+              </div>
+            </div>
+            <div class="security-badge-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--emerald);"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <div>
+                <div style="font-size: 0.82rem; font-weight: 700; color: #fff;">رمزنگاری ۲۵۶ بیتی داده‌ها</div>
+                <div style="font-size: 0.7rem; color: var(--text-dim);">پروتکل امنیتی Escrow</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>
+            © ۲۰۲۵ تمامی حقوق برای فروشگاه بلک‌فروت محفوظ است. طراحی شده برای گیمرهای حرفه‌ای Blox Fruits.
+          </div>
+          <div style="display: flex; gap: 1rem; font-family: var(--font-en);">
+            <span>ULTRA SPEED ENGINE</span>
+            <span>•</span>
+            <span>BLACKFRUIT.NET v2.4.0</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation Bar (Matching Stitch Image 16/18) -->
+    <div class="mobile-bottom-nav">
+      <div class="mobile-nav-grid">
+        <a href="index.html" class="mob-nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>خانه</span>
+        </a>
+        <a href="products.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span>فروشگاه</span>
+        </a>
+        <a href="tracking.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>پیگیری</span>
+        </a>
+        <a href="contact.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span>پشتیبانی</span>
+        </a>
+        <a href="admin.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>پنل کاربری</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Order & Checkout Modal -->
+    <div id="orderModal" class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title" id="orderModalFruitTitle">سفارش و تحویل میوه</div>
+          <button class="modal-close-btn" onclick="closeOrderModal()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="color: var(--text-muted); font-size: 0.85rem;">ارزش در بازی (Value):</span>
+              <span id="orderModalBeli" style="color: #fbbf24; font-family: var(--font-en); font-weight: 700;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="color: var(--text-muted); font-size: 0.85rem;">مبلغ قابل پرداخت:</span>
+              <span id="orderModalPrice" style="color: #fff; font-size: 1.2rem; font-weight: 800;">-</span>
+            </div>
+            <p id="orderModalDesc" style="font-size: 0.8rem; color: var(--text-dim); margin-top: 0.6rem; line-height: 1.5;"></p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <input type="checkbox" id="orderModalPermCheck" />
+              <span>خرید به عنوان میوه دائمی (Permanent Fruit)</span>
+            </label>
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.2rem;">میوه دائمی مستقیماً به اکانت شما اتچ می‌شود و هرگز از بین نمی‌رود.</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="orderRobloxUser">نام کاربری در روبلاکس (Roblox Username) <span style="color: #ef4444;">*</span></label>
+            <input type="text" id="orderRobloxUser" class="form-control" placeholder="مثال: ShadowNinja_IR" required />
+            <div style="font-size: 0.72rem; color: var(--cyan); margin-top: 0.25rem;">جهت ارسال دعوت‌نامه سرور VIP به اکانت شما</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="orderPhone">شماره موبایل یا آیدی تلگرام (اختیاری جهت پیامک فاکتور)</label>
+            <input type="text" id="orderPhone" class="form-control" placeholder="0912xxxxxxx یا @telegram_id" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="orderSea">لوکیشن ترید در بازی</label>
+            <select id="orderSea" class="form-control">
+              <option value="Sea 3">دریای سوم (Sea 3 - Mansion VIP)</option>
+              <option value="Sea 2">دریای دوم (Sea 2 - Cafe SafeZone)</option>
+              <option value="Sea 1">دریای اول (Sea 1 - نیازمند هماهنگی تیکت)</option>
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem;">
+            <button class="btn-primary-glow" style="justify-content: center;" onclick="processOrder('card')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              <span>پرداخت کارت‌به‌کارت و فیش</span>
+            </button>
+            <button class="btn-cyan-glow" style="justify-content: center;" onclick="processOrder('telegram')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-16.5 7.5a2.25 2.25 0 0 0 .126 4.137l4.35 1.45 1.5 4.5a2.25 2.25 0 0 0 3.738.742l2.67-2.67 4.14 3.03a2.25 2.25 0 0 0 3.528-1.428l3-15a2.25 2.25 0 0 0-2.53-2.476z"/></svg>
+              <span>سفارش در تلگرام</span>
+            </button>
+          </div>
+
+          <div class="telegram-direct-card">
+            <div>
+              <div style="font-weight: 700; font-size: 0.85rem; color: #fff;">نیاز به مشاوره قبل از سفارش داری؟</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">پشتیبان‌های ارشد در تلگرام آماده پاسخگویی هستند.</div>
+            </div>
+            <a href="https://t.me/blackfruit_support" target="_blank" class="btn-gold-glow" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+              @blackfruit_support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart Drawer Modal -->
+    <div id="cartDrawerModal" class="modal-overlay">
+      <div class="modal-container" style="max-width: 480px;">
+        <div class="modal-header">
+          <div class="modal-title">سبد خرید میوه‌ها و آیتم‌ها</div>
+          <button class="modal-close-btn" onclick="toggleCartDrawer(false)">✕</button>
+        </div>
+        <div class="modal-body">
+          <div id="cartDrawerItems">
+            <!-- Populated dynamically -->
+          </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <span style="font-weight: 700; color: #fff;">مبلغ کل فاکتور:</span>
+              <span id="cartDrawerSubtotal" style="font-size: 1.2rem; font-weight: 800; color: var(--gold-light);">۰ تومان</span>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <button class="btn-primary-glow" style="width: 100%; justify-content: center; padding: 0.75rem;" onclick="checkoutCart()">
+                تسویه حساب و انتقال به درگاه بانکی
+              </button>
+              <a href="https://t.me/blackfruit_support" target="_blank" class="btn-cyan-glow" style="width: 100%; justify-content: center; padding: 0.75rem;">
+                ارسال کل سبد خرید به پشتیبانی تلگرام
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blox Values Calculator Modal -->
+    <div id="calcModal" class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title">ماشین‌حساب ترید و ارزش‌سنجی میوه‌ها (Blox Values)</div>
+          <button class="modal-close-btn" onclick="closeCalculatorModal()">✕</button>
+        </div>
+        <div class="modal-body">
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            میوه پیشنهادی خودتان و میوه دریافتی از طرف مقابل را مشخص کنید تا بر اساس آخرین محاسبات دیسکورد رسمی تریدرها، برد (W) یا باخت (L) بودن معامله بررسی شود.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label class="form-label">آفر شما (You Offer):</label>
+              <select id="calcMyFruit" class="form-control">
+                <option value="kitsune">Kitsune (115M)</option>
+                <option value="dragon-west">Dragon West (180M)</option>
+                <option value="dough">Dough (25M)</option>
+                <option value="buddha">Buddha (7M)</option>
+                <option value="portal">Portal (6M)</option>
+                <option value="trex">T-Rex (20M)</option>
+                <option value="leopard">Leopard (40M)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">دریافتی از حریف (They Offer):</label>
+              <select id="calcTheirFruit" class="form-control">
+                <option value="dragon-west">Dragon West (180M)</option>
+                <option value="kitsune">Kitsune (115M)</option>
+                <option value="dough">Dough (25M)</option>
+                <option value="buddha">Buddha (7M)</option>
+                <option value="portal">Portal (6M)</option>
+                <option value="trex">T-Rex (20M)</option>
+                <option value="leopard">Leopard (40M)</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="calcCalculateBtn" class="btn-gold-glow" style="width: 100%; justify-content: center; padding: 0.75rem; margin-bottom: 1.25rem;">
+            تحلیل ارزش لحظه‌ای معامله
+          </button>
+
+          <div id="calcResultBox">
+            <!-- Result displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/app.js"></script>
+    <script>
+      function openCalculatorModal() {
+        document.getElementById('calcModal')?.classList.add('active');
+      }
+      function closeCalculatorModal() {
+        document.getElementById('calcModal')?.classList.remove('active');
+      }
+      function handleNavSearch(val) {
+        const grid = document.getElementById('productsGrid');
+        if (grid) {
+          renderProducts('productsGrid', 'all', val.trim());
+          const catPills = document.querySelectorAll('.filter-pill');
+          catPills.forEach(p => p.classList.remove('active'));
+          catPills[0]?.classList.add('active');
+        }
+      }
+      function checkoutCart() {
+        const cart = getCart();
+        if (cart.length === 0) {
+          showToast('سبد خرید شما خالی است.');
+          return;
+        }
+        toggleCartDrawer(false);
+        openOrderModal(cart[0].id, cart[0].permanent);
+      }
+    </script>
+  </body>
+</html>

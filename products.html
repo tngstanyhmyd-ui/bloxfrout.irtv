@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه میوه‌های Blox Fruits - بلک‌فروت</title>
+    <meta name="description" content="فروشگاه جامع خرید میوه‌های فیزیکی و پرمنت Blox Fruits با ارزان‌ترین قیمت تومان و تحویل در سرور VIP" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Top Live Ticker -->
+    <div class="top-ticker">
+      <div class="container">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="ticker-content">
+            <span class="ticker-ping"><span class="ping-dot"></span><span>مارکت‌پلیس زنده بلکس‌فروت ایران</span></span>
+            <span>⚡ تحویل آنی کمتر از ۵ دقیقه در سرورهای VIP</span>
+            <span>🔒 تضمین Safe Trade با قانون ۴۰٪ ارزش بازی</span>
+          </div>
+          <a href="tracking.html" style="color: var(--cyan); font-size: 0.75rem;">پیگیری وضعیت سفارشات</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="header-nav">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo-brand">
+            <div class="logo-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <div class="logo-text-col">
+              <span class="logo-title">BLACKFRUIT</span>
+              <span class="logo-sub">BLOX FRUITS MARKETPLACE</span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li class="nav-item"><a href="index.html">صفحه اصلی</a></li>
+            <li class="nav-item active"><a href="products.html">فروشگاه میوه‌ها</a></li>
+            <li class="nav-item"><a href="tracking.html">پیگیری سفارش</a></li>
+            <li class="nav-item"><a href="about.html">درباره ما و قوانین</a></li>
+            <li class="nav-item"><a href="contact.html">پشتیبانی و تیکت</a></li>
+            <li class="nav-item"><a href="admin.html" style="color: var(--gold-light);">پنل مدیریت</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button class="btn-icon-round" onclick="toggleCartDrawer(true)" title="سبد خرید">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              <span class="cart-counter">0</span>
+            </button>
+            <a href="admin.html" class="btn-primary-glow">
+              <span>ورود به پنل</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Spotlight Banner (Matching Stitch Image 4) -->
+    <section class="container" style="padding: 2.5rem 1.25rem 1rem 1.25rem;">
+      <div style="background: linear-gradient(135deg, rgba(20, 26, 48, 0.9) 0%, rgba(11, 13, 19, 0.95) 100%); border: 1px solid var(--border-neon); border-radius: var(--radius-xl); padding: 2rem; position: relative; overflow: hidden; box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);">
+        <div style="display: grid; grid-template-columns: 1fr 340px; gap: 2rem; align-items: center;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.75rem; background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.4); border-radius: 9999px; color: var(--cyan-light); font-size: 0.75rem; margin-bottom: 0.85rem;">
+              <span class="ping-dot" style="background: var(--cyan); box-shadow: 0 0 6px var(--cyan);"></span>
+              <span>مارکت‌پلیس زنده بلکس‌فروت ایران</span>
+            </div>
+            <h1 style="font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 0.75rem;">
+              خرید مستقیم و آنی میوه‌های افسانه‌ای
+            </h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 620px; line-height: 1.7; margin-bottom: 1.5rem;">
+              دسترسی فوری به داغ‌ترین میوه‌های فصل با تضمین کمترین نرخ و تحویل سیف (Safe Trade) داخل سرور خصوصی زیر ۵ دقیقه. محاسبه همگام با Value List جهانی بازی.
+            </p>
+
+            <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">میانگین تحویل:</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: #fff;">۳ دقیقه</div>
+              </div>
+              <div style="width: 1px; height: 30px; background: var(--border-subtle);"></div>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">معاملات موفق:</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: var(--cyan);">+۱۴,۲۰۰</div>
+              </div>
+              <div style="width: 1px; height: 30px; background: var(--border-subtle);"></div>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">تضمین اصالت:</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: var(--emerald);">۱۰۰٪ معتبر</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Spotlight Card -->
+          <div style="background: rgba(18, 22, 36, 0.85); border: 1px solid var(--border-cyan); border-radius: var(--radius-lg); padding: 1.25rem; text-align: center; position: relative;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-size: 0.7rem; font-family: var(--font-en); color: var(--text-dim);">VALUE: 115,000,000</span>
+              <span style="background: rgba(245, 158, 11, 0.2); color: var(--gold-light); font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">🔥 هایپ بازار امروز</span>
+            </div>
+
+            <div style="width: 80px; height: 80px; margin: 0 auto 0.75rem; display: flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 100 100" style="width: 76px; height: 76px;">
+                <circle cx="50" cy="50" r="38" fill="#1e1b4b" stroke="#38bdf8" stroke-width="2.5"/>
+                <polygon points="32,28 22,12 40,24" fill="#6366f1" stroke="#38bdf8" stroke-width="1.5" />
+                <polygon points="68,28 78,12 60,24" fill="#6366f1" stroke="#38bdf8" stroke-width="1.5" />
+                <ellipse cx="40" cy="48" rx="3" ry="1.5" fill="#38bdf8" />
+                <ellipse cx="60" cy="48" rx="3" ry="1.5" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <div style="font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 0.2rem;">کیتسونه (Kitsune)</div>
+            <div style="font-size: 0.75rem; color: var(--cyan); margin-bottom: 0.85rem;">کمیاب‌ترین و قدرتمندترین میوه آپدیت ۲۰</div>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; padding: 0.4rem 0.6rem; background: rgba(0,0,0,0.3); border-radius: 6px;">
+              <span style="font-size: 0.75rem; color: var(--text-dim);">قیمت تخفیف‌دار:</span>
+              <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">۷۵۰,۰۰۰ تومان</span>
+            </div>
+
+            <button class="btn-primary-glow" style="width: 100%; justify-content: center;" onclick="openOrderModal('kitsune')">
+              ⚡ خرید فوری
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls Bar -->
+    <section class="container" style="padding-top: 1.5rem;">
+      <div style="background: rgba(18, 22, 36, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 2rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+          <!-- Search input -->
+          <div style="flex-grow: 1; max-width: 480px; position: relative;">
+            <input type="text" id="catalogSearchInput" class="form-control" style="padding-right: 2.4rem;" placeholder="جستجوی میوه (مثل Kitsune, Dragon, Leopard, Dough, Buddha...)" />
+            <span style="position: absolute; right: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-dim);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+          </div>
+
+          <!-- Sort dropdown & In-stock toggle -->
+          <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem;">
+              <span style="color: var(--text-muted);">مرتب‌سازی:</span>
+              <select id="catalogSortSelect" class="form-control" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.82rem;" onchange="handleSortChange(this.value)">
+                <option value="popular">محبوب‌ترین</option>
+                <option value="demand">بیشترین تقاضا</option>
+                <option value="price-asc">ارزان‌ترین</option>
+                <option value="price-desc">گران‌ترین</option>
+              </select>
+            </div>
+
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+              <input type="checkbox" id="inStockCheckbox" onchange="handleStockToggle(this.checked)" />
+              <span>فقط کالاهای موجود</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter Pills Tabs -->
+        <div class="tab-pills-list">
+          <button class="filter-pill active" data-cat="all">همه میوه‌ها (۱۲)</button>
+          <button class="filter-pill" data-cat="mythical">افسانه‌ای (Mythical)</button>
+          <button class="filter-pill" data-cat="legendary">اسطوره‌ای (Legendary)</button>
+          <button class="filter-pill" data-cat="rare">کمیاب (Rare)</button>
+          <button class="filter-pill" data-cat="perm">دائمی و پرم (Permanent)</button>
+        </div>
+      </div>
+
+      <!-- Live Fruit Grid -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div style="font-size: 1.15rem; font-weight: 800; color: #fff;">
+          ویترین اختصاصی میوه‌ها <span style="font-size: 0.8rem; color: var(--cyan); font-weight: 500;">(۱۲ مورد بارگذاری شده)</span>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-dim);">
+          آخرین آپدیت بازار: امروز ساعت ۱۷:۳۰
+        </div>
+      </div>
+
+      <div id="productsGrid" class="products-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- 3-Step Safe Trade Guide (Matching Stitch Image 4) -->
+    <section class="container" style="margin-bottom: 3.5rem;">
+      <div style="background: rgba(18, 22, 36, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 2rem;">
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: #fff; text-align: center; margin-bottom: 2rem;">
+          راهنمای خرید و تحویل در ۳ دقیقه
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+          <!-- Step 1 -->
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; text-align: center;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: 800;">۱</div>
+            <div style="font-weight: 700; color: #fff; margin-bottom: 0.5rem;">ثبت سفارش و نام کاربری</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">نام کاربری دقیق روبلاکس خود را وارد کنید تا ادمین مستقیم درخواست دوستی دهد.</div>
+          </div>
+
+          <!-- Step 2 -->
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; text-align: center;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--cyan); color: #0b0d13; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: 800;">۲</div>
+            <div style="font-weight: 700; color: #fff; margin-bottom: 0.5rem;">ورود به سرور VIP</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">لینک اختصاصی سرور امن بلک‌فروت برای شما پیامک و در داشبورد ثبت می‌شود.</div>
+          </div>
+
+          <!-- Step 3 -->
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; text-align: center;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: #0b0d13; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: 800;">۳</div>
+            <div style="font-weight: 700; color: #fff; margin-bottom: 0.5rem;">تبادل امن (Safe Trade)</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">میوه انتخابی پای میز ترید کافه/عمارت تحویل داده شده و رسید رسمی صادر می‌گردد.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="logo-title" style="margin-bottom: 0.5rem;">BLACKFRUIT</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">تخصصی‌ترین و ایمن‌ترین بازار خرید و فروش میوه‌های Blox Fruits در ایران.</p>
+          </div>
+          <div>
+            <div class="footer-col-title">لینک‌های سریع</div>
+            <ul class="footer-links-list">
+              <li><a href="index.html">صفحه اصلی</a></li>
+              <li><a href="tracking.html">پیگیری سفارشات</a></li>
+              <li><a href="about.html">قوانین و راهنما</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">پشتیبانی</div>
+            <ul class="footer-links-list">
+              <li><a href="contact.html">ثبت تیکت پشتیبانی</a></li>
+              <li><a href="https://t.me/blackfruit_support">تلگرام رسمی @blackfruit_support</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">امنیت معاملات</div>
+            <div style="font-size: 0.82rem; color: var(--emerald);">✓ پروتکل ترید قانونی بدون اکسپلویت</div>
+            <div style="font-size: 0.82rem; color: var(--cyan); margin-top: 0.4rem;">✓ تسویه رسمی شتاب و درگاه شاپرک</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-bottom-nav">
+      <div class="mobile-nav-grid">
+        <a href="index.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>خانه</span>
+        </a>
+        <a href="products.html" class="mob-nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span>فروشگاه</span>
+        </a>
+        <a href="tracking.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>پیگیری</span>
+        </a>
+        <a href="contact.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span>پشتیبانی</span>
+        </a>
+        <a href="admin.html" class="mob-nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>پنل کاربری</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Order Modal (Shared) -->
+    <div id="orderModal" class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title" id="orderModalFruitTitle">سفارش میوه</div>
+          <button class="modal-close-btn" onclick="closeOrderModal()">✕</button>
+        </div>
+        <div class="modal-body">
+          <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="color: var(--text-muted); font-size: 0.85rem;">ارزش در بازی:</span>
+              <span id="orderModalBeli" style="color: #fbbf24; font-family: var(--font-en); font-weight: 700;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="color: var(--text-muted); font-size: 0.85rem;">مبلغ قابل پرداخت:</span>
+              <span id="orderModalPrice" style="color: #fff; font-size: 1.2rem; font-weight: 800;">-</span>
+            </div>
+            <p id="orderModalDesc" style="font-size: 0.8rem; color: var(--text-dim); margin-top: 0.6rem;"></p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <input type="checkbox" id="orderModalPermCheck" />
+              <span>خرید به عنوان میوه دائمی (Permanent Fruit)</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="orderRobloxUser">نام کاربری در روبلاکس (Roblox Username) <span style="color: #ef4444;">*</span></label>
+            <input type="text" id="orderRobloxUser" class="form-control" placeholder="مثال: ShadowNinja_IR" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="orderPhone">شماره موبایل یا آیدی تلگرام</label>
+            <input type="text" id="orderPhone" class="form-control" placeholder="0912xxxxxxx یا @telegram_id" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="orderSea">لوکیشن ترید</label>
+            <select id="orderSea" class="form-control">
+              <option value="Sea 3">دریای سوم (Sea 3 - Mansion VIP)</option>
+              <option value="Sea 2">دریای دوم (Sea 2 - Cafe SafeZone)</option>
+              <option value="Sea 1">دریای اول (Sea 1)</option>
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem;">
+            <button class="btn-primary-glow" style="justify-content: center;" onclick="processOrder('gateway')">
+              پرداخت آنلاین شتاب
+            </button>
+            <button class="btn-cyan-glow" style="justify-content: center;" onclick="processOrder('telegram')">
+              سفارش در تلگرام
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Drawer Modal -->
+    <div id="cartDrawerModal" class="modal-overlay">
+      <div class="modal-container" style="max-width: 480px;">
+        <div class="modal-header">
+          <div class="modal-title">سبد خرید</div>
+          <button class="modal-close-btn" onclick="toggleCartDrawer(false)">✕</button>
+        </div>
+        <div class="modal-body">
+          <div id="cartDrawerItems"></div>
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <span style="font-weight: 700; color: #fff;">مبلغ کل فاکتور:</span>
+              <span id="cartDrawerSubtotal" style="font-size: 1.2rem; font-weight: 800; color: var(--gold-light);">۰ تومان</span>
+            </div>
+            <button class="btn-primary-glow" style="width: 100%; justify-content: center;" onclick="openOrderModal(getCart()[0]?.id || 'kitsune')">
+              تسویه حساب
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/app.js"></script>
+    <script>
+      function handleSortChange(sortType) {
+        const products = getStoredProducts();
+        if (sortType === 'demand') {
+          products.sort((a,b) => b.demand - a.demand);
+        } else if (sortType === 'price-asc') {
+          products.sort((a,b) => a.priceToman - b.priceToman);
+        } else if (sortType === 'price-desc') {
+          products.sort((a,b) => b.priceToman - a.priceToman);
+        }
+        saveProducts(products);
+        renderProducts('productsGrid', 'all');
+      }
+
+      function handleStockToggle(inStockOnly) {
+        renderProducts('productsGrid', 'all', '', inStockOnly);
+      }
+    </script>
+  </body>
+</html>
